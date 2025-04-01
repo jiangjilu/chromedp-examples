@@ -21,7 +21,7 @@ func main() {
 	if err := chromedp.Run(ctx,
 		// emulate iPhone 7 landscape
 		chromedp.Emulate(device.IPhone7landscape),
-		chromedp.Navigate(`https://www.whatsmyua.info/`),
+		chromedp.Navigate(`https://m.baidu.com/`),
 		chromedp.CaptureScreenshot(&b1),
 
 		// reset
@@ -29,7 +29,7 @@ func main() {
 
 		// set really large viewport
 		chromedp.EmulateViewport(1920, 2000),
-		chromedp.Navigate(`https://www.whatsmyua.info/?a`),
+		chromedp.Navigate(`https://www.baidu.com/`),
 		chromedp.CaptureScreenshot(&b2),
 	); err != nil {
 		log.Fatal(err)
